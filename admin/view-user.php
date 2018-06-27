@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <div class="row">
     <!-- Page Header -->

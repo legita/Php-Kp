@@ -26,6 +26,16 @@ session_start();
 }
 </script>
 
+<script type="text/javascript">
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+        return false;
+      return true;
+    }
+</script>
+
 <style>
 
 /*line*/
@@ -153,7 +163,7 @@ session_start();
           <label class="control-label col-sm-2" for="jumlah">Jumlah</label>
           <label class="control-label col-sm-1">:</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="jumlah" onkeyup="kali();" / name="jumlah" placeholder="Jumlah" required>
+              <input type="text" class="form-control" id="jumlah" onkeyup="kali();" / onkeypress="return hanyaAngka(event)" name="jumlah" placeholder="Jumlah" required>
             </div>
         </div>  
         <div class="form-group" align="left">
@@ -182,11 +192,12 @@ session_start();
               <input style="color: black;" input class="form-control" name="total" id="total" type="text" value="<?php echo $data['total']; ?>" placeholder="Total Biaya" readonly>
             </div>
         </div>
+
         <div class="form-group" align="left">
         <label class="control-label col-sm-2" for="date">Tanggal Pesanan Di Butuhkan</label>
         <label class="control-label col-sm-1">:</label>
           <div class="col-sm-8 date input-group input-append date" id="datePicker">
-            <input type="date" class="form-control" name="date" id="date" value="<?php $date=date('d-m-Y'); echo $date;?>">
+            <input type="date" class="form-control" name="date" id="date" value="<?php $date=date('d-m-Y'); echo $date;?>">  
           </div>
         </div>
         <div class="form-group" align="left">

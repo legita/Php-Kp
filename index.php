@@ -84,7 +84,7 @@ if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
 							  <a class="dropdown-toggle" data-toggle="dropdown">| Lainnya | 
 							  <span class="caret"></span></a>
 							  <ul class="dropdown-menu" style="background-color: brown;">
-							    <li><a href="index.php?halaman=Status">| Status Pemesanan |</a></li>
+							    <li><a href="index.php?halaman=informasi-pemesanan">| Status Pemesanan |</a></li>
 							    <li><a href="index.php?halaman=Konfirmasi">| Konfirmasi Pemesanan |</a></li>
 							    <li><a href="#">| Informasi Biaya Pemesanan |</a></li>
 							  </ul>
@@ -131,7 +131,7 @@ if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
 	        include 'pemesanan.php';
 	      }
 
-	      elseif ($halaman=='Status') {
+	      elseif ($halaman=='informasi-pemesanan') {
 	        include 'informasi-pemesanan.php';
 	      }
 

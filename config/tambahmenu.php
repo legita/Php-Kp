@@ -1,7 +1,5 @@
 
 <?php
-
-	error_reporting();
 	
 	include 'koneksi.php';
 
@@ -10,6 +8,7 @@
 	$jenis_menu 	= $_POST['jenis_menu'];
 	$nama_menu 		= $_POST['nama_menu'];
 	$hargamenu		= $_POST['hargamenu'];
+	$hargasatuan	= $_POST['hargasatuan'];
 	$keterangan		= $_POST['keterangan'];
 
 	$target_dir = "../makanan/";
@@ -54,7 +53,7 @@
 	    }
 	}
 
-	$insert			= "INSERT INTO menu VALUES ('','$kode_menu','$jenis_menu','$nama_menu','$target_file','$hargamenu','$keterangan')";
+	$insert			= "INSERT INTO menu VALUES ('','$kode_menu','$jenis_menu','$nama_menu','$target_file','$hargamenu','$hargasatuan','$keterangan')";
 
 	$simpan			= mysqli_query($konek, $insert)or die(mysqli_error($konek));
 

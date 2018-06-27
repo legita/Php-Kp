@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 12, 2018 at 03:07 AM
+-- Generation Time: Jun 27, 2018 at 07:56 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `komenweb` (
   `tgl` varchar(25) NOT NULL,
   `balas` varchar(100) NOT NULL,
   PRIMARY KEY (`id_komen`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `komenweb`
@@ -149,7 +149,8 @@ CREATE TABLE IF NOT EXISTS `komenweb` (
 INSERT INTO `komenweb` (`id_komen`, `nama`, `email`, `pertanyaan`, `tgl`, `balas`) VALUES
 (1, 'Nian', 'nian@gmail.com', 'apa', '14-05-2018:08:0', 'ya'),
 (2, 'Tia', 'tia@gmail.com', 'Hallo', '14-05-2018:08:22:03', ''),
-(3, 'Mia', 'mia@gmail.com', 'apa kabar?', '11-06-2018:07:10:49', '');
+(3, 'Mia', 'mia@gmail.com', 'apa kabar?', '11-06-2018:07:10:49', ''),
+(4, 'Diam', 'diam@gmail.com', 'Salam Kenal', '26-06-2018:01:48:38', '');
 
 -- --------------------------------------------------------
 
@@ -167,20 +168,26 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `hargasatuan` int(15) NOT NULL,
   `keterangan` text NOT NULL,
   PRIMARY KEY (`id_menu`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
 
 --
 -- Dumping data for table `menu`
 --
 
 INSERT INTO `menu` (`id_menu`, `kode_menu`, `jenis_menu`, `nama_menu`, `gambar_menu`, `hargamenu`, `hargasatuan`, `keterangan`) VALUES
-(7, 'A001', 'Ayam', 'Ayam', '../makanan/3.jpg', 18000, 13000, '- Enak\r\n- Lezat\r\n- Murah'),
+(7, 'A001', 'Ayam', 'Ayam Sambal', '', 17000, 10000, '- Enak- Lezat- Murah'),
 (8, 'A002', 'Ayam', 'Ayam Bakar', '../makanan/a-ayam-lala-2.jpg', 18000, 13000, 'Enaque'),
-(10, 'I001', 'Ikan', 'Ikan Goreng', '../makanan/Cara Membuat Ikan Bakar Pedas Manis.jpg', 17000, 11000, '- Gurih - Lezat - Maknyus  '),
-(14, '003', 'Ayam', 'as', '../makanan/1.jpg', 1454, 0, 'Matapz'),
+(10, 'Ikan Goren', 'Ikan', 'Ikan Bakar Pedas Manis', '', 17000, 11000, '- Gurih - Lezat - Maknyus  '),
+(14, 'A003', 'Ayam', 'Ayam Bakar', '../makanan/1.jpg', 16000, 11000, 'Ayam Goreng + Serundeng'),
 (15, 'et', 'Sop', 'dgrg', '../makanan/9798Paket B.png', 13452, 0, 'dfdf'),
 (18, '003', 'Ikan', 'as', '../makanan/2_bebek_hijau.jpg', 1454, 0, 'xzc'),
-(19, 'gf', 'Sop', 'ggf', '../makanan/2.jpg', 1345, 0, 'Gurih dan mantap');
+(19, 'gf', 'Sop', 'ggf', '../makanan/2.jpg', 1345, 0, 'Gurih dan mantap'),
+(20, 'A001', 'Ayam', 'Ayam Sambal', '../makanan/3.jpg', 18000, 10000, '- Enak- Lezat- Murah'),
+(21, 'A001', 'Ayam', 'Ayam Sambal', '../makanan/3.jpg', 17000, 10000, '- Enak- Lezat- Murah'),
+(22, 'A001', 'Ayam', 'Ayam Sambal', '../makanan/frikadel_kentang.jpg', 17000, 10000, '- Enak- Lezat- Murah'),
+(26, 'A004', 'Ayam', 'Ayam Sambal', '../makanan/26398144_200281844044805_39569946186707', 18000, 13000, 'Gurih dan mantap'),
+(27, 'I001', 'Ikan', 'Ikan Goreng', '../makanan/3CJTL8969E2AC8BF43B551lv.jpg', 13452, 10000, 'Gurih dan mantap'),
+(28, '003', 'Ayam', 'Ayam Sambal', '../makanan/2.jpg', 18000, 13000, '- Enak- Lezat- Murah');
 
 -- --------------------------------------------------------
 
@@ -192,41 +199,43 @@ CREATE TABLE IF NOT EXISTS `pembelian` (
   `id_pembelian` int(10) NOT NULL AUTO_INCREMENT,
   `id_user` int(10) NOT NULL,
   `nama_pembeli` varchar(30) NOT NULL,
-  `tgl` varchar(15) NOT NULL,
+  `tgl` varchar(25) NOT NULL,
   `kode_menu` varchar(5) NOT NULL,
   `nama_menu` varchar(20) NOT NULL,
   `type` varchar(20) NOT NULL,
-  `jenis_wadah` varchar(10) NOT NULL,
-  `harga` int(11) NOT NULL,
-  `hargamenu` int(10) NOT NULL,
-  `buah` varchar(10) NOT NULL,
-  `jumlah` int(10) NOT NULL,
-  `total` int(11) NOT NULL,
-  `totalcek` int(15) NOT NULL,
+  `jenis_wadah` varchar(25) NOT NULL,
+  `harga` int(25) NOT NULL,
+  `hargamenu` int(25) NOT NULL,
+  `buah` varchar(25) NOT NULL,
+  `jumlah` int(25) NOT NULL,
+  `total` text NOT NULL,
+  `totalcek` text NOT NULL,
   `tgl_pesan` varchar(25) NOT NULL,
   `tgl_butuh` varchar(25) NOT NULL,
   `catatan` varchar(50) NOT NULL,
   `invoice` varchar(50) NOT NULL,
   `fixed` int(2) NOT NULL,
   PRIMARY KEY (`id_pembelian`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=69 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=80 ;
 
 --
 -- Dumping data for table `pembelian`
 --
 
 INSERT INTO `pembelian` (`id_pembelian`, `id_user`, `nama_pembeli`, `tgl`, `kode_menu`, `nama_menu`, `type`, `jenis_wadah`, `harga`, `hargamenu`, `buah`, `jumlah`, `total`, `totalcek`, `tgl_pesan`, `tgl_butuh`, `catatan`, `invoice`, `fixed`) VALUES
-(58, 9, 'nadia', '06-06-2018', 'A001', 'Ayam', 'Satuan', '-', 0, 13000, '-', 1, 13000, 0, '', '', 'pake sambel yang banyak', '946', 1),
-(59, 9, 'nadia', '06-06-2018', 'I001', 'Ikan Goreng', 'Satuan', '-', 0, 11000, '-', 2, 22000, 0, '', '', 'jkkk', '944', 1),
-(60, 9, 'nadia', '06-06-2018', 'A002', 'Ayam Bakar', 'Satuan', '-', 0, 13000, '-', 2, 26000, 0, '', '', 'jj', '615', 1),
-(61, 9, 'nadia', '06-06-2018', 'A001', 'Ayam', 'Paket', 'Kotak Kerd', 2800, 18000, 'Jeruk', 2, 38800, 0, '', '', 'as', '589', 1),
-(62, 9, 'nadia', '06-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Kotak Kerd', 2800, 18000, 'Jeruk', 1, 20800, 0, '', '', 'dg', '839', 1),
-(63, 1, 'gita', '06-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Kotak Kerd', 2800, 18000, 'Jeruk', 1, 20800, 0, '', '', 'as', '77', 1),
-(64, 1, 'gita', '', 'A001', 'Ayam', 'Paket', 'Kotak Kerd', 2800, 18000, 'Jeruk', 2, 38800, 0, '12-06-2018 : 07:39:21', '', 'sd', '270', 1),
-(65, 1, 'gita', '', 'I001', 'Ikan Goreng', 'Paket', 'Kotak Kerd', 2800, 17000, 'Pisang', 3, 53800, 0, '12-06-2018 : 07:39:21', '', 'df', '270', 1),
-(66, 1, 'gita', '12-06-2018', 'A001', 'Ayam', 'Paket', 'Kotak Kerd', 2800, 18000, 'Pisang', 2, 38800, 0, '12-06-2018 : 07:39:21', '', 'sd', '270', 1),
-(67, 1, 'gita', '12-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Sterofoam', 2000, 18000, 'Pisang', 2, 38000, 0, '12-06-2018 : 07:51:38', '', 'sds', '789', 1),
-(68, 1, 'gita', '12-06-2018', 'A001', 'Ayam', 'Paket', 'Kotak Kerd', 2800, 18000, 'Pisang', 1, 20800, 0, '12-06-2018 : 07:51:38', '2018-06-22', 'ks', '789', 1);
+(67, 1, 'gita', '12-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Sterofoam', 2000, 18000, 'Pisang', 2, '38000', '0', '12-06-2018 : 07:51:38', '', 'sds', '789', 1),
+(68, 1, 'gita', '12-06-2018', 'A001', 'Ayam', 'Paket', 'Kotak Kerd', 2800, 18000, 'Pisang', 1, '20800', '0', '12-06-2018 : 07:51:38', '2018-06-22', 'ks', '789', 1),
+(69, 1, 'gita', '12-06-2018', 'A001', 'Ayam', 'Satuan', '-', 0, 13000, '-', 3, '39000', '0', '12-06-2018 : 09:59:24', '2018-06-22', 'hy', '515', 1),
+(70, 1, 'gita', '12-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Kotak Kerd', 2800, 18000, 'Jeruk', 2, '38800', '0', '12-06-2018 : 14:44:35', '2018-06-15', 'kl', '271', 1),
+(71, 1, 'gita', '12-06-2018', 'A002', 'Ayam Bakar', 'Satuan', '-', 0, 13000, '-', 2, '26000', 'Rp. 64,800', '21-06-2018 : 03:29:24', '2018-06-16', 'pl', '556', 1),
+(72, 1, 'gita', '20-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Kotak Kerd', 2800, 18000, 'Jeruk', 2, '38800', 'Rp. 64,800', '21-06-2018 : 03:29:24', '2018-06-23', 'fd', '556', 1),
+(73, 1, 'gita', '21-06-2018', 'A002', 'Ayam Bakar', 'Satuan', '-', 0, 13000, '-', 2, '26000', 'Rp. 26,000', '21-06-2018 : 16:34:30', '2018-06-23', 'xd', '293', 1),
+(74, 1, 'gita', '21-06-2018', 'I001', 'Ikan Goreng', 'Satuan', '-', 0, 11000, '-', 2, '22000', 'Rp. 22,000', '21-06-2018 : 16:35:25', '2018-06-22', 'fg', '946', 1),
+(75, 1, 'gita', '22-06-2018', 'A002', 'Ayam Bakar', 'Paket', 'Kotak Kerdus', 2800, 18000, 'Jeruk', 100, '1802800', 'Rp. 1,841,600', '24-06-2018 : 20:44:20', '2018-06-25', 'hg', '635', 1),
+(76, 1, 'gita', '24-06-2018', 'A001', 'Ayam', 'Paket', 'Kotak Kerdus', 2800, 18000, 'Pisang', 2, '38800', 'Rp. 1,841,600', '24-06-2018 : 20:44:20', '2018-06-27', 'nk', '635', 1),
+(77, 1, 'gita', '24-06-2018', 'A002', 'Ayam Bakar', 'Satuan', '-', 0, 13000, '-', 2, '26000', 'Rp. 26,000', '24-06-2018 : 20:50:39', '2018-06-27', 'gh', '303', 1),
+(78, 1, 'gita', '26-06-2018', 'I001', 'Ikan Goreng', 'Satuan', '-', 0, 11000, '-', 10, '110000', 'Rp. 110,000', '26-06-2018 : 15:55:41', '2018-06-29', 'hks', '33', 1),
+(79, 1, 'gita', '26-06-2018', '003', 'as', 'Paket', 'Kotak Kerdus', 2800, 1454, 'Jeruk', 6, '11524', 'Rp. 11,524', '26-06-2018 : 15:56:38', '2018-06-30', 'ds', '59', 1);
 
 -- --------------------------------------------------------
 
@@ -257,12 +266,21 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
   `id_user` int(11) NOT NULL,
   `tanggal` varchar(25) NOT NULL,
   `nama_pembeli` varchar(20) NOT NULL,
-  `totalcek` int(25) NOT NULL,
+  `totalcek` text NOT NULL,
   `upload` varchar(35) NOT NULL,
   `konfirmasi` int(2) NOT NULL,
   `invoice` int(3) NOT NULL,
   PRIMARY KEY (`id_transaksi`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `tanggal`, `nama_pembeli`, `totalcek`, `upload`, `konfirmasi`, `invoice`) VALUES
+(5, 1, '2018-06-24', 'gita', 'Rp. 64,800', '../img/1.png', 1, 556),
+(6, 1, '2018-06-26', 'gita', 'Rp. 26,000', '../img/jlptdes.png', 0, 293),
+(7, 1, '2018-06-26', 'gita', 'Rp. 1,841,600', '../img/krssmt6new.png', 0, 635);
 
 -- --------------------------------------------------------
 

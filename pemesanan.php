@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
-error_reporting()
+
 
 ?>
 
@@ -48,7 +48,6 @@ error_reporting()
 		<th class="bg-info"><center>Jumlah</center></th>
 		<th class="bg-info"><center>Harga Menu</center></th>
 		<th class="bg-info"><center>Buah</center></th>
-		<th class="bg-info"><center>Tgl. Butuh</center></th>
 		<th class="bg-info"><center>Total</center></th>
 		<th class="bg-info"><center>Aksi</center></th>
 				
@@ -74,12 +73,12 @@ include'config/koneksi.php';
 		<td><center><?php echo $data['jumlah']; ?></center></td>
 		<td><center><?php echo $data['hargamenu']; ?></center></td>
 		<td><center><?php echo $data['buah']; ?></center></td>
-		<td><center><?php echo $data['tgl_butuh']; ?></center></td>
 		<td><center><?php echo 'Rp. '.number_format($data['total']); ?></center></td>
 		<td><center><a href="config/hapus_pemesanan.php?id=<?php echo $data['id_pembelian']; ?>" class="btn btn-danger">Hapus</a></center></td>
 
 	</tr>
 	
+
 <?php
 }
 ?>
@@ -94,8 +93,8 @@ include'config/koneksi.php';
 ?>
 
 <tr>
- <td colspan="9" style="color: white;"> Sub Total : </td>
- <td><input style="color: black;" type="text" name="tot"  class="form-control" id="tot" value="<?php echo 'Rp. '.number_format($data['tot']); ?>"></td>
+ <td colspan="11" style="color: white;"> Sub Total : </td>
+ <td><input style="color: black;" type="text" name="tot"  class="form-control" id="tot" value="<?php echo 'Rp. '.number_format($data['tot']); ?>" readonly></td>
 
 <table>
 
@@ -117,29 +116,9 @@ include 'config/koneksi.php';
 	$invoice  = mt_rand(10,1000);
 	$totalcek = $_POST['tot'];
 
-	$updateInvoice = "UPDATE pembelian set invoice = '$invoice', fixed = '1', totalcek = '$tot', tgl_pesan = '$tgl'  WHERE fixed = '0' ";
+	$updateInvoice = "UPDATE pembelian set invoice = '$invoice', fixed = '1', totalcek = '$totalcek', tgl_pesan = '$tgl'  WHERE fixed = '0' ";
 	$query = mysqli_query($konek,$updateInvoice);
 } ?>
-
-<tr>
-
-<?php
-
-include 'config/koneksi.php';
-$username = $_SESSION['username'];
-
-$sql 	= "SELECT id_pembelian, invoice, totalcek FROM pembelian 
-		   WHERE nama_pembeli = '$username' AND id_pembelian = 'id_pembelian'";
-		
-$query 	= mysqli_query($konek, $sql);
-
-$row 	= mysqli_fetch_array($query);
-echo '<center>'.'Id      : ' . $row['id_pembelian'] . '</center>';
-echo '<center>'.'Invoice : ' . $row['invoice'] . '</center>';
-echo '<center>'.'Total   : ' . $row['totalcek'] . '</center>';
-
-?>
-</tr>
 
 
 </table>

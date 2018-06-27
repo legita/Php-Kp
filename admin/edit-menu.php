@@ -64,12 +64,19 @@ session_start();
        	    </div>
        	  </div>
        	  <div class="form-group">
-       	    <label class="col-md-2">Harga Menu</label>
+       	    <label class="col-md-2">Harga Paket</label>
        	    <label class="col-md-1">:</label>
        	    <div class="col-md-6">
        	      <input class="form-control" type="text" class="form-control" id="hargamenu" name="hargamenu" value="<?php echo $data['hargamenu'] ?>" required>
        	    </div>
           </div>
+          <div class="form-group">
+            <label class="col-md-2">Harga Satuan</label>
+            <label class="col-md-1">:</label>
+            <div class="col-md-6">
+              <input class="form-control" type="text" class="form-control" id="hargasatuan" name="hargasatuan" value="<?php echo $data['hargasatuan'] ?>" required>
+              </div>
+          </div> 
        	  <div class="form-group">
        	    <label class="col-md-2">Keterangan</label>
        	    <label class="col-md-1">:</label>

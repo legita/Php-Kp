@@ -38,8 +38,9 @@
                                             <th><center>Kode Menu</th>
                                             <th><center>Jenis Menu</th>
                                             <th><center>Nama Menu</th>
-                                            <th><center>Gambar</th>
-                                            <th><center>Harga</th>
+                                            <th><center>Gambar Menu</th>
+                                            <th><center>Harga Paket</th>
+                                            <th><center>Harga Satuan</th>
                                             <th><center>Keterangan</th>
                                             <th><center>Fungsi</th>
                                         </tr>
@@ -60,8 +61,9 @@
                                             <td><center><?php echo $data['kode_menu']; ?></td>
                                                 <td><center><?php echo $data['jenis_menu']; ?></td>
                                                 <td><center><?php echo $data['nama_menu']; ?></td>
-                                                <td><center><img src ="<?php echo $data ['gambar_menu']; ?>" width="100px" height="50px"/></td>
+                                                <td><center><a data-toggle="tooltip" data-placement="right" title="Lihat Gambar" href="<?php echo $data['gambar_menu'] ?>" target="_blank"><img src ="<?php echo $data ['gambar_menu']; ?>" width="100px" height="50px"/></a></td>
                                                 <td><center>Rp <?php echo number_format($data['hargamenu']); ?></td>
+                                                <td><center>Rp <?php echo number_format($data['hargasatuan']); ?></td>
                                                 <td><center><?php echo $data['keterangan']; ?></td>
 
                                                 <td><center>

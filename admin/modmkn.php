@@ -41,7 +41,7 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <!-- <span class="close">&times;</span> <br> -->
           <font color="darkblue"><h2 class="modal-title" align="center">Tambah Menu</h2>
-          <p align="center"><sup><i>Update</i></sup></p></font>
+          <p align="center"><sup><i>Insert</i></sup></p></font>
         </div>
         <!-- Modal Menu -->
         <div class="modal-body" align="center">
@@ -80,11 +80,19 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-3">Harga Menu</label>
+                <label class="col-sm-3">Harga Paket</label>
                 <label class="col-sm-1">:</label>
                 <label class="col-sm-1">Rp.</label>
                 <div class="col-sm-7">
-                  <input type="text" name="hargamenu" class="form-control" id="hargamenu" placeholder="Harga menu" required>
+                  <input type="text" name="hargamenu" class="form-control" id="hargamenu" placeholder="Harga paket" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3">Harga Satuan</label>
+                <label class="col-sm-1">:</label>
+                <label class="col-sm-1">Rp.</label>
+                <div class="col-sm-7">
+                  <input type="text" name="hargasatuan" class="form-control" id="hargasatuan" placeholder="Harga satuan" required>
                 </div>
             </div>
             <div class="form-group">
