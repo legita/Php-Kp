@@ -4,7 +4,7 @@ session_start();
 include 'config/koneksi.php';
 
 $nama       = $_POST['nama'];
-$tgl        = date("Y-m-d");
+$tgl        = date("d-m-Y");
 $invoice    = $_POST['invoice'];
 $kelas      = $_POST['kelas'];
 $id_user    = $_POST['id_user'];

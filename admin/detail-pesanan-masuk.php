@@ -55,8 +55,8 @@ $id_user = $_GET['id_user'];
                             while ($data=mysqli_fetch_array($tampil)) { ?>
                               <tr>
                                 <td><center><?php echo $no++; ?></center></td>
-                                <td><center><?php echo date('d-M-Y', strtotime($data['tanggal'])); ?></center></td>
-                                <td><center><?php echo date('d-M-Y', strtotime($data['tgl_butuh'])); ?></center></td>
+                                <td><center><?php echo date('d-m-Y', strtotime($data['tanggal'])); ?></center></td>
+                                <td><center><?php echo date('d-m-Y', strtotime($data['tgl_butuh'])); ?></center></td>
                                 <td><center><?php echo $data['kode_menu']; ?></center></td>
                                 <td><center><?php echo $data['id_user']; ?></center></td>
                                 <td><center><?php echo $data['nama_pembeli']; ?></center></td>

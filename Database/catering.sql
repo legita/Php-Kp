@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2018 at 01:40 PM
+-- Generation Time: Jul 12, 2018 at 03:50 PM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -244,28 +244,7 @@ INSERT INTO `pembelian` (`id_pembelian`, `id_user`, `nama_pembeli`, `tgl`, `kode
 (99, 1, 'Gita', '10-07-2018', 'A001', 'Ayam Balado', 'Paket', 'Kotak Kerdus', 2800, 18000, 'Pisang', 3, 56800, 71800, '11-07-2018 : 01:15:36', '2018-07-13', 'yui', '383', 1),
 (100, 1, 'Gita', '10-07-2018', 'A001', 'Ayam Balado', 'Satuan', '-', 0, 15000, '-', 3, 45000, 45000, '11-07-2018 : 01:20:46', '2018-07-13', 'rew', '294', 1),
 (105, 10, 'MS', '11-07-2018', 'A002', 'Ayam Bakar', 'Satuan', '-', 0, 15000, '-', 5, 75000, 927800, '12-07-2018 : 10:48:05', '2018-07-14', 'hj', '756', 1),
-(106, 10, 'MS', '12-07-2018', 'A003', 'Ayam Goreng S.Hijau', 'Paket', 'Kotak Kerdus', 2800, 17000, 'Pisang', 50, 852800, 927800, '12-07-2018 : 10:48:05', '2018-07-18', 'yang enak bgt', '756', 1),
-(107, 1, 'Gita', '12-07-2018', 'A003', 'Ayam Goreng S.Hijau', 'Paket', 'Kotak Kerdus', 2800, 17000, 'Pisang', 60, 1022800, 1022800, '12-Jul-2018 : 15:35:49', '2018-07-15', 'tyu', '240', 1),
-(108, 10, 'MS', '12-Jul-2018', 'A001', 'Ayam Balado', 'Satuan', '-', 0, 15000, '-', 50, 750000, 1602800, '12-Jul-2018 : 18:19:40', '2018-07-14', 'yut', '80', 1),
-(109, 10, 'MS', '12-07-2018', 'S001', 'Sop Daging Sapi', 'Paket', 'Kotak Kerdus', 2800, 17000, 'Jeruk', 50, 852800, 1602800, '12-Jul-2018 : 18:19:40', '2018-07-21', 'tyra', '80', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `request`
---
-
-CREATE TABLE IF NOT EXISTS `request` (
-  `id_request` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) NOT NULL,
-  `nama_pemesan` varchar(20) NOT NULL,
-  `tanggal` datetime NOT NULL,
-  `kode_menu` varchar(8) NOT NULL,
-  `nama_menu` varchar(20) NOT NULL,
-  `request` varchar(25) NOT NULL,
-  `harga` int(11) NOT NULL,
-  PRIMARY KEY (`id_request`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+(106, 10, 'MS', '12-07-2018', 'A003', 'Ayam Goreng S.Hijau', 'Paket', 'Kotak Kerdus', 2800, 17000, 'Pisang', 50, 852800, 927800, '12-07-2018 : 10:48:05', '2018-07-18', 'yang enak bgt', '756', 1);
 
 -- --------------------------------------------------------
 
@@ -292,8 +271,7 @@ CREATE TABLE IF NOT EXISTS `transaksi` (
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `tanggal`, `nama_pembeli`, `totalcek`, `upload`, `konfirmasi`, `invoice`, `selesai`) VALUES
 (11, 1, '2018-07-11', 'Gita', 38800, '../img/2.png', 0, 328, 0),
-(16, 10, '2018-07-12', 'MS', 927800, '../img/WhatsApp Image 2018-01-23 at', 1, 756, 1),
-(17, 1, '12-Jul-2018', 'Gita', 30000, '../img/WhatsApp Image 2018-01-24 at', 1, 161, 0);
+(16, 10, '2018-07-12', 'MS', 927800, '../img/WhatsApp Image 2018-01-23 at', 1, 756, 1);
 
 -- --------------------------------------------------------
 

@@ -99,8 +99,8 @@ include '../config/koneksi.php';
                 </li>
 
                 <li class="dropdown">
-                    <a a href="?halaman=komentarweb">
-                        <span class="top-label label label-success"><?php echo $Notif2; ?></span>  <i class="fa fa-tasks fa-3x"></i>
+                    <a href="?halaman=komentarmenu">
+                        <span class="top-label label label-danger"><?php echo $Notif; ?></span><i class="fa fa-envelope fa-3x"></i>
                     </a>
                 </li>
 
@@ -201,8 +201,6 @@ include '../config/koneksi.php';
                         else if($halaman=="pesanan-masuk")         include "pesanan-masuk.php";
                         else if($halaman=="detail-pesanan-masuk")  include "detail-pesanan-masuk.php";
 
-                        else if($halaman=="request-masuk")         include "request-masuk.php";
-                        else if($halaman=="detail-request-masuk")  include "detail-request-masuk.php";
 
                         else if($halaman=="komentarmenu")          include "komentarmenu.php";
                         else if($halaman=="komentarweb")           include "komentarweb.php";
@@ -218,8 +216,15 @@ include '../config/koneksi.php';
                         else if($halaman=="tambah-menu")           include "tambah-menu.php";
 
                         else if($halaman=="report-penjualan")      include "report-penjualan.php";
-                        else if($halaman=="report-grafik")        include "report-grafik.php"; 
+                        else if($halaman=="report-grafik")         include "report-grafik.php"; 
                         else if($halaman=="reportpdf")             include "reportpdf.php";
+                        else if($halaman=="cetak-report-penjualan")  
+                             include "cetak-report-penjualan.php";
+
+                        else if($halaman=="data-penjualan")        include "data-penjualan.php";
+                        else if($halaman=="detail")                include "detail.php";
+                        
+                        else if($halaman=="komentarmenu")          include "komentarmenu.php";
                     
                 }       
                   

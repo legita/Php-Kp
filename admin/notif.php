@@ -6,7 +6,7 @@
 </li>
 
 <li class="dropdown">
-    <a href="?halaman=komentarmenu">
-        <span class="top-label label label-danger"><?php echo $Notif; ?></span><i class="fa fa-envelope fa-3x"></i>
+    <a a href="?halaman=komentarweb">
+        <span class="top-label label label-success"><?php echo $Notif2; ?></span>  <i class="fa fa-tasks fa-3x"></i>
     </a>
 </li>

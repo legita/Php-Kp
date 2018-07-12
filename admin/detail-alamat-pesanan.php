@@ -29,7 +29,7 @@ $id_user = $_GET['id_user'];
                           <tbody>
                         <tr>
                           <th class="bg-info"><center>Pemesan</center></th> 
-                          <th class="bg-info"><center>Nama Pemesan</center></th> 
+                          <th class="bg-info"><center>Penanggung Jawab</center></th> 
                           <th class="bg-info"><center>Alamat</center></th>
                           <th class="bg-info"><center>Kecamatan</center></th>
                           <th class="bg-info"><center>Kota</center></th>

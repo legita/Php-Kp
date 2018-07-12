@@ -29,7 +29,7 @@ date_default_timezone_set('Asia/Jakarta');
 <div class="col-lg-12">
 	<div class="col-sm-5" style="color:white;">
 		<label> Tanggal Pesan :</label><br>
-		<label type="tgl" name="tgl"><?php $tgl=date('d-M-Y : H:i:s'); echo $tgl;?></label>
+		<label type="tgl" name="tgl"><?php $tgl=date('d-m-Y : H:i:s'); echo $tgl;?></label>
 	
 	</div><br>
 

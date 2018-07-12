@@ -106,7 +106,7 @@ session_start();
         <br>
         
           <input type="hidden" name="id_user" value="<?php echo $_SESSION['id_user']; ?>">
-          <input type="hidden" name="tgl" value="<?php $tgl=date('d-M-Y'); echo $tgl;?>">
+          <input type="hidden" name="tgl" value="<?php $tgl=date('d-m-Y'); echo $tgl;?>">
           <input type="hidden" name="id_menu" value="<?php echo $data['id_menu']; ?>">   
    
         <hr><i style="color:white;"><sub><span class="label label-danger">Penting</span> Nama Pemesan dapat di ganti dengan nama Perusahaan atau Nama Penanggung Jawab !</sub></i><hr>  
@@ -166,7 +166,7 @@ session_start();
         <label class="col-sm-1">:</label> 
           <div class="col-sm-1">
           <div class="date input-group input-append date" id="datePicker">
-            <input type="date" class="form-control" name="date" id="date" value="<?php $date=date('d-M-Y'); echo $date;?>">  
+            <input type="date" class="form-control" name="date" id="date" value="<?php $date=date('d-m-Y'); echo $date;?>">  
           </div>
           </div>
         </div>
