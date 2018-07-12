@@ -24,6 +24,15 @@ session_start();
   }
 </style>
 
+<script type="text/javascript">
+    function hanyaAngka(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+        return false;
+      return true;
+    }
+</script>
 
       <div class="container">
           <hr>  
@@ -37,7 +46,7 @@ session_start();
         <div class="modal-body"> -->
          <form action="config/prosesdaftar.php" method="POST" class="form-horizontal" enctype="multipart/form-data">
             <div class="form-group">
-              <label class="col-sm-3">Name</label>
+              <label class="col-sm-3">Pemesan</label>
               <label class="col-sm-1">:</label>
               <div class="col-sm-6">
                 <input type="nama_lengkap" name="nama_lengkap" class="form-control" placeholder="Enter your full name" required>
@@ -48,6 +57,13 @@ session_start();
               <label class="col-sm-1">:</label>
               <div class="col-sm-6">
                 <input type="username" name="username" class="form-control" placeholder="Enter your username" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-3">Penanggung Jawab</label>
+              <label class="col-sm-1">:</label>
+              <div class="col-sm-6">
+                <input type="text" name="pj" class="form-control" placeholder="Enter your name" required>
               </div>
             </div>
             <div class="form-group">
@@ -123,13 +139,12 @@ session_start();
               <label class="col-sm-3">Telephon</label>
               <label class="col-sm-1">:</label>
               <div class="col-sm-6">
-                <input type="no_telepon" name="no_telepon" class="form-control" placeholder="Enter your telephon number" required>
+                <input type="text" name="no_tlp" class="form-control" onkeypress="return hanyaAngka(event)" placeholder="Enter your telephon number" required>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2"></label>
               <label class="col-sm-4"></label>
-              <div class="col-sm-6">
+              <div class="col-sm-6" align="right">
                 <button type="submit" class="btn btn-success">Submit</button> 
               </div>
             </div>

@@ -1,7 +1,7 @@
 <div class="row">
     <!-- Page Header -->
     <div class="col-lg-12">
-        <h1 class="page-header">Home Ayam Bakar Rina</h1>
+        <h1 class="page-header">Home <?php echo $level ?> Ayam Bakar Rina</h1>
     </div>
     <!--End Page Header -->
 </div>
@@ -16,7 +16,8 @@
        <p align="center">
            <?php
            date_default_timezone_set('Asia/Jakarta');
-           echo "<b>Login hari ini: </b>" . date("d/m/Y | H:i:s");
+           echo "<b>Login hari ini: </b>" . date('l')."<br>";
+           echo date("d-M-Y | H:i:s");
            ?>
        </p>
      </div>

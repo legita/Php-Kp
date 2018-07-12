@@ -3,7 +3,8 @@
 			<div id="copyright" class="hoc clear center">
 				<p><font color="white">2018 &copy; Kerja Praktek - Gita Apriyani | 2015230019 | 
 				<a href="http://www.unsada.ac.id/" data-toggle="tooltip" data-placement="top" title="Universitas Darma Persada">Universitas Darma Persada</a></p>
-    			<p>Powered By <a target="_blank" href="index.php?halaman=index" title="Ayam Bakar Rina">Ayam Bakar Rina</a></font></p>
+    			<p>Powered By <a target="_blank" href="index.php?halaman=index" title="Ayam Bakar Rina">Ayam Bakar Rina</a> </font></p>
+    			<p>021-88960820 | 089612022005</p>
 			</div>
 			<p>
 				<ul class="fh5co-social-icons">

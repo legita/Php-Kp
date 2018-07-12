@@ -49,6 +49,24 @@ include '../config/koneksi.php';
 
 ?>
 
+<?php
+include '../config/koneksi.php';
+
+    $queryNotif="SELECT * FROM komentar";
+    $sqlNotif = mysqli_query($konek,$queryNotif) or die (mysqli_error($konek));
+    $Notif = mysqli_num_rows($sqlNotif);
+
+?>
+
+<?php
+include '../config/koneksi.php';
+
+    $queryNotif="SELECT * FROM komenweb";
+    $sqlNotif = mysqli_query($konek,$queryNotif) or die (mysqli_error($konek));
+    $Notif2 = mysqli_num_rows($sqlNotif);
+
+?>
+
 <body>
     <!--  wrapper -->
     <div id="wrapper">
@@ -81,12 +99,18 @@ include '../config/koneksi.php';
                 </li>
 
                 <li class="dropdown">
+                    <a a href="?halaman=komentarweb">
+                        <span class="top-label label label-success"><?php echo $Notif2; ?></span>  <i class="fa fa-tasks fa-3x"></i>
+                    </a>
+                </li>
+
+                <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-3x"></i>
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="../config/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li> <a href="../config/logout.php" value="Click Me" onclick="return confirm('Apakah anda ingin logout?') "><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- end dropdown-user -->
@@ -141,10 +165,7 @@ include '../config/koneksi.php';
                         <a href="index.php?halaman=menu-makanan"><i class="fa fa-bar-chart-o fa-fw"></i> Menu Makanan</a>
                     </li>
                     <li>
-                        <a href="index.php?halaman=komentar"><i class="fa fa-edit fa-fw"></i> Komentar</a>
-                    </li>
-                    <li>
-                        <a href="login.php"><i class="fa fa-sign-in fa-fw"></i> Login Page</a>
+                        <a href="../config/logout.php" value="Click Me" onclick="return confirm('Apakah anda ingin logout?') "><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
                 </ul>
                 <!-- end side-menu -->
@@ -183,20 +204,21 @@ include '../config/koneksi.php';
                         else if($halaman=="request-masuk")         include "request-masuk.php";
                         else if($halaman=="detail-request-masuk")  include "detail-request-masuk.php";
 
-                        else if($halaman=="komentar")              include "komentar.php";
+                        else if($halaman=="komentarmenu")          include "komentarmenu.php";
+                        else if($halaman=="komentarweb")           include "komentarweb.php";
                         else if($halaman=="edit-komen")            include "edit-komen.php";
                         else if($halaman=="edit-komentar")         include "edit-komentar.php";
 
                 }
                 elseif($level=="Owner" ){
 
-                    if($halaman=="home-admin-owner")               include "home-admin-owner.php";                 
+                        if($halaman=="home-admin-owner")           include "home-admin-owner.php";                 
                         else if($halaman=="menu-makanan")          include "menu-makanan.php";
                         else if($halaman=="edit-menu")             include "edit-menu.php";
                         else if($halaman=="tambah-menu")           include "tambah-menu.php";
 
                         else if($halaman=="report-penjualan")      include "report-penjualan.php";
-                        else if($halaman=="report-request")        include "report-request.php"; 
+                        else if($halaman=="report-grafik")        include "report-grafik.php"; 
                         else if($halaman=="reportpdf")             include "reportpdf.php";
                     
                 }       

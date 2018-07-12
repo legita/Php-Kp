@@ -5,16 +5,8 @@
     </a>
 </li>
 
-<?php
-include '../config/koneksi.php';
-
-    $queryNotif="SELECT * FROM komenweb";
-    $sqlNotif = mysqli_query($konek,$queryNotif) or die (mysqli_error($konek));
-    $Notif = mysqli_num_rows($sqlNotif);
-
-?>
 <li class="dropdown">
-    <a href="?halaman=komentar">
+    <a href="?halaman=komentarmenu">
         <span class="top-label label label-danger"><?php echo $Notif; ?></span><i class="fa fa-envelope fa-3x"></i>
     </a>
 </li>

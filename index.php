@@ -67,7 +67,7 @@ if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
 							<li class="active"><a class="color_animation" href="index.php?halaman=index">| Home | </a></li>
 							<li class="active"><a class="color_animation" href="index.php?halaman=Menu">| Menu | </a></li>
 							<li class="active"><a class="color_animation" href="index.php?halaman=About">| About | </a></li>
-							<li class="active"><a class="color_animation" href="index.php?halaman=Pemesanan">| Pemesanan | </a></li>
+							<li class="active"><a class="color_animation" href="index.php?halaman=Pemesanan">| Keranjang | </a></li>
 							<li class="active"><a class="color_animation" href="index.php?halaman=Pertanyaan">| Pertanyaan | </a></li>
 							<?php
 							
@@ -84,9 +84,8 @@ if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
 							  <a class="dropdown-toggle" data-toggle="dropdown">| Lainnya | 
 							  <span class="caret"></span></a>
 							  <ul class="dropdown-menu" style="background-color: brown;">
-							    <li><a href="index.php?halaman=informasi-pemesanan">| Status Pemesanan |</a></li>
-							    <li><a href="index.php?halaman=Konfirmasi">| Konfirmasi Pemesanan |</a></li>
-							    <li><a href="#">| Informasi Biaya Pemesanan |</a></li>
+							    <li><a href="index.php?halaman=Konfirmasi">| Status Pemesanan |</a></li>
+							    <li><a href="index.php?halaman=Biaya">| Informasi Biaya Pemesanan |</a></li>
 							  </ul>
 							</li>
 						</ul>
@@ -131,12 +130,12 @@ if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
 	        include 'pemesanan.php';
 	      }
 
-	      elseif ($halaman=='informasi-pemesanan') {
-	        include 'informasi-pemesanan.php';
+	      elseif ($halaman=='Konfirmasi') {
+	        include 'konfirmasi-pemesanan.php';
 	      }
 
-	      elseif ($halaman=='Konfirmasi') {
-	        include 'konfirmasi-pesanan.php';
+	      elseif ($halaman=='Biaya') {
+	        include 'biaya-pesanan.php';
 	      }
 	    ?>   
 	
@@ -153,8 +152,6 @@ if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
 	
 	<!-- jQuery -->
 	<script src="assets/js/jquery.min.js"></script>
-
-<!-- 	<script src="bootstrap/jquery-3.2.1.min.js"></script> -->
 
 	
 	<script src="assets/js/jquery.easing.1.3.js"></script>

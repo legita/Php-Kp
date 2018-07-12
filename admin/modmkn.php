@@ -46,11 +46,13 @@
         <!-- Modal Menu -->
         <div class="modal-body" align="center">
           <form action="../config/tambahmenu.php" method="POST" class="form-horizontal" enctype="multipart/form-data">
+            <label>
+              <input type="hidden" name="id_menu" class="form-control" id="id_menu"></label>
             <div class="form-group">
                 <label class="col-sm-3">Kode Menu</label>
                 <label class="col-sm-1">:</label>
                 <div class="col-sm-8">
-                  <input type="text" name="kode_menu" class="form-control" id="kode_produk" placeholder="Kode menu" required>
+                  <input type="text" name="kode_menu" class="form-control" id="kode_menu" placeholder="Kode menu" required>
                 </div>
             </div>
             <div class="form-group">

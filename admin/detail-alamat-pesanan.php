@@ -28,7 +28,8 @@ $id_user = $_GET['id_user'];
                       <thead>
                           <tbody>
                         <tr>
-                          <th class="bg-info"><center>Nama Lengkap</center></th>
+                          <th class="bg-info"><center>Pemesan</center></th> 
+                          <th class="bg-info"><center>Nama Pemesan</center></th> 
                           <th class="bg-info"><center>Alamat</center></th>
                           <th class="bg-info"><center>Kecamatan</center></th>
                           <th class="bg-info"><center>Kota</center></th>
@@ -50,6 +51,7 @@ $id_user = $_GET['id_user'];
                       while ($data=mysqli_fetch_array($tampil)) { ?>
                         <tr>
                           <td><center><?php echo $data['nama_lengkap']; ?></center></td>
+                          <td><center><?php echo $data['pj']; ?></center></td>
                           <td><center><?php echo $data['alamat']; ?></center></td>
                           <td><center><?php echo $data['kecamatan']; ?></center></td>
                           <td><center><?php echo $data['kota']; ?></center></td>

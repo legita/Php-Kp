@@ -2,7 +2,7 @@
     
 	include 'koneksi.php';
 
-    $id_menu        = $_POST['id'];
+    $id_menu        = $_POST['id_menu'];
 	$kode_menu 		= $_POST['kode_menu'];
 	$jenis_menu	 	= $_POST['jenis_menu'];
     $nama_menu      = $_POST['nama_menu'];
@@ -11,7 +11,7 @@
     $keterangan     = $_POST['keterangan'];
 
 
-    $target_dir = "../makanan/";
+    $target_dir  = "../makanan/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -53,14 +53,9 @@
         }
     }
 
-    $insert         = "INSERT INTO menu VALUES ('','$kode_menu','$jenis_menu','$nama_menu','$target_file','$hargamenu','$hargasatuan','$keterangan')";
-
-    $simpan         = mysqli_query($konek, $insert)or die(mysqli_error($konek));
-
-
         $update     = "UPDATE menu set kode_menu='$kode_menu', jenis_menu='$jenis_menu', 
-                         nama_menu='$nama_menu', hargamenu='$hargamenu', hargasatuan='$hargasatuan', keterangan='$keterangan' where id_menu='$id_menu'";
-        $update  = mysqli_query($konek, $update)or die(mysqli_error());
+                         nama_menu='$nama_menu', gambar_menu='$target_file', hargamenu='$hargamenu', hargasatuan='$hargasatuan', keterangan='$keterangan' where id_menu='$id_menu'";
+        $update  = mysqli_query($konek, $update)or die(mysqli_error($konek));
  
 
    

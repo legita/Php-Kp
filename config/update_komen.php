@@ -17,7 +17,7 @@
 	if ($updatefaq)
     	{
     		echo "<br><br><br><strong><center><i>Balasan berhasil ditambah!";
-    		echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/index.php?halaman=komentar">';
+    		echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/index.php?halaman=komentarweb">';
     	}
 	else {
     		print"

@@ -1,6 +1,6 @@
 <center><p class="bg-info" style="padding:10px;">
-		Username anda      : <?php echo $username ?>
-	<br>Anda login sebagai : <?php echo $level ?>
+		Username Anda      : <?php echo $username ?>
+	<br>Anda Login Sebagai : <?php echo $level ?>
 </p></center>
 
 

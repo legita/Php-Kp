@@ -69,26 +69,26 @@
 	  <br>
 	</div>
 			<form class="form-horizontal" method="POST" action="config/tambahkomenweb.php">
-				<div class="form-group" align="left">
-				<label class="control-label col-sm-2" for="nama"> Nama </label>
+				<div class="form-group">
+				<label class="control-label col-sm-3" for="nama" style="text-align: left;"> Nama </label>
 				<label class="control-label col-sm-1">:</label>
-					<div class="col-sm-8">
+					<div class="col-sm-6">
 						<input type="text" class="form-control" name="nama" placeholder="Isi nama anda" required>
 					</div>
 				</div>
-				<div class="form-group" align="left">
-				<label class="control-label col-sm-2" for="email"> Email </label>
+				<div class="form-group">
+				<label class="control-label col-sm-3" for="email" style="text-align: left;"> Email </label>
 				<label class="control-label col-sm-1">:</label>
-					<div class="col-sm-8">
+					<div class="col-sm-6">
 						<input type="email" class="form-control" name="email" placeholder="Isi email anda" required>
 					</div>
 				</div>		
-				<div class="form-group" align="left">
-				<label class="control-label col-sm-2" for="pertanyaan"> Pertanyaan </label>
+				<div class="form-group">
+				<label class="control-label col-sm-3" for="pertanyaan" style="text-align: left;"> Pertanyaan </label>
 				<label class="control-label col-sm-1">:</label>
-					<div class="col-sm-8">
+					<div class="col-sm-6">
 						<input type="text" class="form-control" name="pertanyaan" placeholder="Isi pertanyaan anda" required>
-						<input type="hidden" class="form-control" name="tgl" value="<?php $tgl=date('d-m-Y:h:i:s'); echo $tgl; ?>">
+						<input type="hidden" class="form-control" name="tgl" value="<?php $tgl=date('d-M-Y:h:i:s'); echo $tgl; ?>">
 						<br>
 						<button type="submit" value="Kirim" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-ok"></span> Kirim</button>
 					</div>

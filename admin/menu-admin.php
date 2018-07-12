@@ -4,5 +4,9 @@
 </li>
 
 <li>
-  <a href="index.php?halaman=data-konfirmasi"><i class="fa fa-upload fa-fw"></i> Konfirmasi Pesanan </a>
+  <a href="index.php?halaman=data-konfirmasi"><i class="fa fa-edit fa-fw"></i> Konfirmasi Pesanan </a>
+</li>
+
+<li>
+    <a href=""><i class="fa fa-upload fa-fw"></i> Apa</a>
 </li>

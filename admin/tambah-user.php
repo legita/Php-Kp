@@ -17,10 +17,17 @@ include '../config/koneksi.php';
 
          <form action="../config/tambahuser.php" method="POST" class="form-horizontal" enctype="multipart/form-data">
             <div class="form-group">
-              <label class="col-md-2">Name</label>
+              <label class="col-md-2">Pemesan</label>
               <label class="col-md-1">:</label>
               <div class="col-md-6">
                 <input type="nama_lengkap" name="nama_lengkap" class="form-control" placeholder="Enter your full name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-2">Penanggung Jawab</label>
+              <label class="col-md-1">:</label>
+              <div class="col-md-6">
+                <input type="pj" name="pj" class="form-control" placeholder="Enter your pj" required>
               </div>
             </div>
             <div class="form-group">

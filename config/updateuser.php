@@ -1,11 +1,12 @@
 <?php
-	error_reporting(0);
+
 	include 'koneksi.php';
 	
 	$id_user		 = $_POST['id_user'];
 	$nama_lengkap	 = $_POST['nama_lengkap'];
+	$pj				 = $_POST['pj'];
 	$username 		 = $_POST['username'];
-	$password 		 = md5($_POST['password']);
+	$password 		 = ($_POST['password']);
 	$passwordkonfirm = md5($_POST['passwordkonfirm']);	
 	$jk				 = $_POST['jk'];
 	$provinsi		 = $_POST['provinsi'];
@@ -13,11 +14,12 @@
 	$kecamatan 		 = $_POST['kecamatan'];
 	$alamat 		 = $_POST['alamat'];
 	$email 		 	 = $_POST['email'];
-	$no_telp		 = $_POST['no_tlp'];
+	$no_tlp			 = $_POST['no_tlp'];
 	$level 			 = $_POST['level'];
 	
 
 		$update = "UPDATE user SET nama_lengkap 	= '$nama_lengkap',
+									pj 			 	= '$pj',
 									username 		= '$username',
 									password 		= '$passwordkonfirm',
 									jk 				= '$jk',

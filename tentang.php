@@ -22,12 +22,12 @@
 	                  
 	    
 	                <div class="panel-body text-center" style="color: white;">
-	                <h2 style="color:red;">Ayam Bakar Rina</h2>
+	                <h2 style="color:red;">Rumah Makan Ayam Bakar Rina</h2>
 	                   
 	                Harapan Baru 2 Bekasi, Jl, Rajawali 5 No. 2<br>
 	                PHONE       : 021 88960920 / 0897 9244 964<br />
 	                EMAIL       : ayambakar_rina@gmail.com<br />
-	                WhatsUp		: 0862 7383 2283
+	                WhatsUp		: 0897 9244 964
 	        
 	                </div>
 	                </p>

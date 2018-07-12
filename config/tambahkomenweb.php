@@ -1,6 +1,6 @@
 <?php
 
-  error_reporting();
+  error_reporting(0);
   
   include 'koneksi.php';
 
@@ -8,7 +8,7 @@
   $email       = $_POST["email"];
   $pertanyaan  = $_POST["pertanyaan"];
   $tgl         = $_POST["tgl"];
-  $balasan     = $_POST["balas"];
+  $balas       = $_POST["balas"];
   
 
   $insert     = "INSERT INTO komenweb VALUES ('','$nama','$email','$pertanyaan', '$tgl','$balas')";

@@ -53,12 +53,13 @@
                         
 
                         <center><p style="font-size: 28px;"><?php echo $data['nama_menu'] ?></p></center>
-                        <p><img src="makanan/<?php echo $data['gambar_menu'] ?>" width="328px" height="230px"></p>
-                        <p>Kode Makanan : <?php echo $data['kode_menu'] ?></p>
-                        <p>Harga Paket  : Rp.<?php echo $data['hargamenu'] ?></p>
-                        <p>Harga Satuan : Rp.<?php echo $data['hargasatuan'] ?></p>
-                        <p>Ketengan     : <?php echo $data['keterangan'] ?></p>
-                        </center>
+                        <p><img src="makanan/<?php echo $data['gambar_menu'] ?>" width="328px" height="230px"></p><hr>
+                        <table>
+                        <td><center>Kode Makanan : <?php echo $data['kode_menu'] ?><br>
+                        Harga Paket  : Rp.<?php echo $data['hargamenu'] ?><br>
+                        Harga Satuan : Rp.<?php echo $data['hargasatuan'] ?><br>
+                        Ketengan     : <?php echo $data['keterangan'] ?></center></td>
+                        </table></center><hr>
 
                         <!-- <a data-toggle="tooltip" style="color: white;" data-placement="right" title="Order!"> -->
                         

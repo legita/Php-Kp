@@ -45,16 +45,15 @@
                                 <?php
                                 include'../config/koneksi.php';
 
-                                $query="SELECT * FROM transaksi join pembelian WHERE 
-                                		transaksi.invoice=pembelian.invoice and transaksi.konfirmasi= '0' ";
+                                $query="SELECT * FROM transaksi join pembelian WHERE transaksi.invoice=pembelian.invoice and transaksi.konfirmasi= '0' ";
 
                                 $tampil=mysqli_query($konek,$query)or die(mysqli_error($konek));
                                 $no=1;
                                 while ($data=mysqli_fetch_array($tampil)) { ?>
                                 	<tr>
                                 		<td><center><?php echo $no++; ?></center></td>
-                                		<td><center><?php echo date('d-m-Y', strtotime($data['tanggal'])); ?></center></td>
-                                		<td><center><?php echo date('d-m-Y', strtotime($data['tgl_butuh'])); ?></center></td>
+                                		<td><center><?php echo date('d-M-Y', strtotime($data['tanggal'])); ?></center></td>
+                                		<td><center><?php echo date('d-M-Y', strtotime($data['tgl_butuh'])); ?></center></td>
                                 		<td><center><?php echo $data['kode_menu']; ?></center></td>
                                 		<td><center><?php echo $data['nama_pembeli']; ?></center></td>
                                 		<td><center><?php echo $data['nama_menu']; ?></center></td>
@@ -64,7 +63,7 @@
                                 		<td><center><a data-toggle="tooltip" data-placement="right" title="Lihat Gambar" href="<?php echo $data['upload'] ?>" target="_blank"><img src ="<?php echo $data['upload']; ?>" width="113px"; height="152px";></a></td>
                                 		</center><td>		
                                 		<?php if ($data['konfirmasi']==0){ ?>
-                                		<a href="../config/proses_konfirmasi.php?id=<?php echo $data['id_transaksi']; ?>&pembeli=<?php echo $pembeli; ?>" class="btn btn-warning">Konfirmasi</a>
+                                		<a href="../config/proses_konfirmasi.php?id=<?php echo $data['id_transaksi']; ?>" class="btn btn-warning">Konfirmasi</a>
                                 			<?php }
                                 		else { ?>
                                 			<button type="button"  class="btn btn-danger">Sukses Konfirmasi</button>
@@ -83,7 +82,7 @@
                         </thead>
                     </table>
 
-                    <center><a href="?halaman=data-konfirmasi" class="btn btn-primary">Data Konfirmasi</a></center>
+                    <a href="?halaman=data-konfirmasi" class="btn btn-primary" style="text-align: right;">Data Konfirmasi</a>
 
                 </div>
             </div>

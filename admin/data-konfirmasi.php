@@ -1,7 +1,7 @@
 <div class="row">
     <!-- Page Header -->
     <div class="col-lg-12">
-        <h1 class="page-header">Konfirmasi Pesanan </h1>
+        <h1 class="page-header">Pesanan Terkonfirmasi</h1>
     </div>
     <!--End Page Header -->
 </div>
@@ -11,7 +11,7 @@
         <!-- Advanced Tables -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                 Data Pesanan Yang Di Konfirmasi
+                 Data Pesanan Yang <i style="color: red;">Terkonfirmasi</i> dan <i style="color:orange;">Selesai</i>
             </div>
             <div class="panel-body">
  
@@ -56,7 +56,14 @@
                             <td>
                                 <a href="index.php?halaman=detail-pesanan&id=<?php echo $data['id_transaksi'];?>&id_user=<?php echo $data['id_user']; ?>" class="btn btn-primary">Detail Produk</a>
                                     <br><br>
-                                <a href="index.php?halaman=detail-alamat-pesanan&id=<?php echo $data['id_transaksi'];?>&id_user=<?php echo $data['id_user']; ?>" class="btn btn-info">Detail alamat</a> 
+                                <a href="index.php?halaman=detail-alamat-pesanan&id=<?php echo $data['id_transaksi'];?>&id_user=<?php echo $data['id_user']; ?>" class="btn btn-info">Detail alamat</a><br><br>
+                                <center><?php 
+                                if ($data['selesai']==0){ ?>
+                                <a href="../config/proses_selesai.php?id=<?php echo $data['id_transaksi']; ?>" class="btn btn-danger" title="Selesai" onclick="return confirm('Pesanan Selesai?');"><i class="fa fa-check"></i></a>
+                                    <?php }
+                                else { ?>
+                                    <button type="button"  class="btn btn-warning" title="Pesanan Selesai"><i class="fa fa-check"></i></button>
+                                <?php } ?></center> 
                             </td>
                           </tr>
                           

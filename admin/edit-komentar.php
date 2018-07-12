@@ -48,14 +48,6 @@
         </div>
         <div class="form-group">
             <label class="col-sm-1"></label>
-            <label class="col-sm-2">Email</label>
-            <label class="col-sm-1">:</label>
-            <div class="col-sm-7">
-                <input class="form-control" name="email" type="email" value="<?php echo $data['email'];?>" readonly>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-1"></label>
             <label class="col-sm-2">Pertanyaan / Komentar</label>
             <label class="col-sm-1">:</label>
             <div class="col-sm-7">

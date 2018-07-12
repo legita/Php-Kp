@@ -34,10 +34,17 @@
          
 
           <div class="form-group">
-            <label class="col-sm-2" for="nama_lengkap">Name</label>
+            <label class="col-sm-2" for="nama_lengkap">Pemesan</label>
             <label class="col-sm-1">:</label>
             <div class="col-sm-6">
               <input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" value="<?php echo $data['nama_lengkap']; ?>">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2" for="nama_lengkap">Penanggung Jawab</label>
+            <label class="col-sm-1">:</label>
+            <div class="col-sm-6">
+              <input class="form-control" type="text" name="pj" id="pj" value="<?php echo $data['pj']; ?>">
             </div>
           </div>
           <div class="form-group">

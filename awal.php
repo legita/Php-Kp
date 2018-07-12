@@ -5,7 +5,7 @@
 			<div class="col-md-12 text-center">
 				<div class="display-t js-fullheight">
 					<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-						<h1> <em> Hello </em> Selamat Datang </h1>
+						<h2 style="color: white; font-family: Kristen ITC;"> <em> Hello </em> Selamat Datang </h2>
 						<h1> <em> |. <?php echo $_SESSION['username']; ?> .| </em> </h1>
 					</div>
 				</div>

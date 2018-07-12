@@ -2,7 +2,7 @@
 error_reporting();
 	include 'koneksi.php';
 
-	$id_komen = $_GET ['id'];
+	$id_komen = $_GET ['id_komen'];
 
 	$hapus 	 = "DELETE FROM komenweb WHERE id_komen='$id_komen'";
 	$query	 = mysqli_query($konek, $hapus);
@@ -10,7 +10,7 @@ error_reporting();
 	if ($query)
 	    {
 	    	echo "<br><br><br><strong><center><i>Data berhasil dihapus!";
-	    	echo "<META HTTP-EQUIV='REFRESH' CONTENT ='1; URL=../admin/admin.php?halaman=komentar'>";
+	    	echo "<META HTTP-EQUIV='REFRESH' CONTENT ='1; URL=../admin/index.php?halaman=komentarweb'>";
 	    }
 	else {
 	    	print"

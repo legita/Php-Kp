@@ -1,6 +1,6 @@
 
 <?php
-	
+
 	include 'koneksi.php';
 
 	$id_menu 		= $_POST['id_menu'];

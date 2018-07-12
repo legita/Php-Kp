@@ -4,7 +4,7 @@ session_start();
 include 'koneksi.php';
 
 $nama       = $_POST['nama'];
-$tgl        = date("Y-m-d");
+$tgl        = date("d-M-Y");
 $invoice    = $_POST['invoice'];
 $id_user    = $_POST['id_user'];
 $totalcek   = $_POST['totalcek'];
@@ -68,6 +68,6 @@ $query = mysqli_query($konek,$sqlInsert);
 
 if($query){
     echo "<strong><center>Bukti Pembayaran Berhasil Dikirim";
-    echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index.php?halaman=index">'; 
+    echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index.php?halaman=Konfirmasi">'; 
 }
 ?>

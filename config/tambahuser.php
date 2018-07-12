@@ -4,6 +4,7 @@ error_reporting();
 include'koneksi.php';
 
 $nama_lengkap 	= $_POST['nama_lengkap'];
+$pj 			= $_POST['pj'];
 $username 		= $_POST['username'];
 $password 		= md5($_POST['password']);
 $jk				= $_POST['jk'];
@@ -15,7 +16,7 @@ $email 			= $_POST['email'];
 $no_tlp 		= $_POST['no_tlp'];
 $level 			= $_POST['level'];
 
-$input = "INSERT INTO user (id_user,nama_lengkap,username,password,jk,provinsi,kota,kecamatan,alamat,email,no_tlp,level) values ('','$nama_lengkap','$username','$password','$jk','$provinsi','$kota','$kecamatan','$alamat','$email','$no_tlp','$level')";
+$input = "INSERT INTO user (id_user,nama_lengkap,pj,username,password,jk,provinsi,kota,kecamatan,alamat,email,no_tlp,level) values ('','$nama_lengkap','$pj','$username','$password','$jk','$provinsi','$kota','$kecamatan','$alamat','$email','$no_tlp','$level')";
 $data = mysqli_query($konek,$input) or die (mysqli_error($konek));
 
 if($data){

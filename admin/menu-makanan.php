@@ -34,15 +34,15 @@
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th><center>No</th>
-                                            <th><center>Kode Menu</th>
-                                            <th><center>Jenis Menu</th>
-                                            <th><center>Nama Menu</th>
-                                            <th><center>Gambar Menu</th>
-                                            <th><center>Harga Paket</th>
-                                            <th><center>Harga Satuan</th>
-                                            <th><center>Keterangan</th>
-                                            <th><center>Fungsi</th>
+                                            <th><center>No</center></th>
+                                            <th><center>Kode Menu</center></th>
+                                            <th><center>Jenis Menu</center></th>
+                                            <th><center>Nama Menu</center></th>
+                                            <th><center>Gambar Menu</center></th>
+                                            <th><center>Harga Paket</center></th>
+                                            <th><center>Harga Satuan</center></th>
+                                            <th><center>Keterangan</center></th>
+                                            <th><center>Fungsi</center></th>
                                         </tr>
                                         <?php
                                         $no = 1;
@@ -57,19 +57,19 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><center><?php echo $no++; ?></td>
-                                            <td><center><?php echo $data['kode_menu']; ?></td>
-                                                <td><center><?php echo $data['jenis_menu']; ?></td>
-                                                <td><center><?php echo $data['nama_menu']; ?></td>
-                                                <td><center><a data-toggle="tooltip" data-placement="right" title="Lihat Gambar" href="<?php echo $data['gambar_menu'] ?>" target="_blank"><img src ="<?php echo $data ['gambar_menu']; ?>" width="100px" height="50px"/></a></td>
-                                                <td><center>Rp <?php echo number_format($data['hargamenu']); ?></td>
-                                                <td><center>Rp <?php echo number_format($data['hargasatuan']); ?></td>
-                                                <td><center><?php echo $data['keterangan']; ?></td>
+                                            <td><center><?php echo $no++; ?></center></td>
+                                            <td><center><?php echo $data['kode_menu']; ?></center></td>
+                                                <td><center><?php echo $data['jenis_menu']; ?></center></td>
+                                                <td><center><?php echo $data['nama_menu']; ?></center></td>
+                                                <td><center><a data-toggle="tooltip" data-placement="right" title="Lihat Gambar" href="<?php echo $data['gambar_menu'] ?>" target="_blank"><img src ="<?php echo $data ['gambar_menu']; ?>" width="100px" height="50px"/></a></center></td>
+                                                <td><center>Rp <?php echo number_format($data['hargamenu']); ?></center></td>
+                                                <td><center>Rp <?php echo number_format($data['hargasatuan']); ?></center></td>
+                                                <td><center><?php echo $data['keterangan']; ?></center></td>
 
                                                 <td><center>
                                                   <a href="index.php?halaman=edit-menu&id=<?php echo $data['id_menu'];?>"><span class="fa fa-edit"></span></a>
                                                  &nbsp;
-                                                  <a href="../config/delete_menu.php?id=<?php echo $data['id_menu'];?>" title="Hapus Menu" onclick="return confirm('Hapus Menu ini?');"><span class="fa fa-trash-o"></span></a>
+                                                  <a href="../config/delete_menu.php?id=<?php echo $data['id_menu'];?>" title="Hapus Menu" onclick="return confirm('Hapus Menu ini?');"><span class="fa fa-trash-o"></span></a></center>
                                                 </td>
                                         </tr>
                                           <?php

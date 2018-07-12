@@ -32,19 +32,20 @@
                                 <table class="table table-bordered" style="width:auto">
                                   <thead>
                                     <tr align="center">
-                                      <th><center>No.</th>
-                                      <th><center>Nama</th>
-                                      <th><center>Username</th>
-                                      <th><center>Password</th>
-                                      <th><center>Jenis Kelamin</th>
-                                      <th><center>Provinsi</th>
-                                      <th><center>Kota</th>
-                                      <th><center>Kecamatan</th>
-                                      <th><center>Alamat</th>
-                                      <th><center>Email</th>
-                                      <th><center>No. Telepon</th>
-                                      <th><center>Level</th>
-                                      <th><center>Action</th>
+                                      <th><center>No.</center></th>
+                                      <th><center>Pemesan</center></th>
+                                      <th><center>Nama PJ</center></th>
+                                      <th><center>Username</center></th>
+                                      <th><center>Password</center></th>
+                                      <th><center>Jenis Kelamin</center></th>
+                                      <th><center>Provinsi</center></th>
+                                      <th><center>Kota</center></th>
+                                      <th><center>Kecamatan</center></th>
+                                      <th><center>Alamat</center></th>
+                                      <th><center>Email</center></th>
+                                      <th><center>No. Telepon</center></th>
+                                      <th><center>Level</center></th>
+                                      <th><center>Action</center></th>
                                     </tr>
                                   </thead>
                                       <?php
@@ -59,24 +60,25 @@
                                             ?>
                                   <tbody myTable>
                                       <tr>
-                                          <td><center><?php echo $no++; ?></td>
-                                          <td><center><?php echo $data['nama_lengkap']; ?></td>
-                                              <td><center><?php echo $data['username']; ?></td>
-                                              <td><center><?php echo $data['password']; ?></td>
-                                              <td><center><?php echo $data['jk']; ?></td>
-                                              <td><center><?php echo $data['provinsi']; ?></td>
-                                              <td><center><?php echo $data['kota']; ?></td>
-                                              <td><center><?php echo $data['kecamatan']; ?></td>
-                                              <td><center><?php echo $data['alamat']; ?></td>
-                                              <td><center><?php echo $data['email']; ?></td>
-                                              <td><center><?php echo $data['no_tlp']; ?></td>
-                                              <td><center><?php echo $data['level']; ?></td>
+                                          <td><center><?php echo $no++; ?></center></td>
+                                          <td><center><?php echo $data['nama_lengkap']; ?></center></td>
+                                          <td><center><?php echo $data['pj']; ?></center></td>
+                                          <td><center><?php echo $data['username']; ?></center></td>
+                                          <td><center><?php echo $data['password']; ?></center></td>
+                                          <td><center><?php echo $data['jk']; ?></center></td>
+                                          <td><center><?php echo $data['provinsi']; ?></center></td>
+                                          <td><center><?php echo $data['kota']; ?></center></td>
+                                          <td><center><?php echo $data['kecamatan']; ?></center></td>
+                                          <td><center><?php echo $data['alamat']; ?></center></td>
+                                          <td><center><?php echo $data['email']; ?></center></td>
+                                          <td><center><?php echo $data['no_tlp']; ?></center></td>
+                                          <td><center><?php echo $data['level']; ?></center></td>
 
-                                              <td><center>
-                                                <a href="index.php?halaman=edit-user&id=<?php echo $data['id_user'];?>"><span class="fa fa-edit"></span></a>
-                                               &nbsp;
-                                                <a href="../config/delete_user.php?id=<?php echo $data['id_user'];?>" title="Hapus User" onclick="return confirm('Hapus User ini?');"><span class="fa fa-trash-o"></span></a>
-                                              </td>
+                                          <td><center>
+                                            <a href="index.php?halaman=edit-user&id=<?php echo $data['id_user'];?>"><span class="fa fa-edit"></span></a>
+                                           &nbsp;
+                                            <a href="../config/delete_user.php?id=<?php echo $data['id_user'];?>" title="Hapus User" onclick="return confirm('Hapus User ini?');"><span class="fa fa-trash-o"></span></a></center>
+                                          </td>
                                       </tr>
                                         <?php
                                         
